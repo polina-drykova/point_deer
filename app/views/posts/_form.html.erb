@@ -1,0 +1,15 @@
+<%= form_for (@post) do |f| %>
+  <%= render 'shared/error_messages' %>
+
+  <%= f.text_field :title,
+  placeholder: 'Type the post title here',
+  lable: true %>
+  <%= f.date_select :date %>
+  <%= f.text_area :content,
+  placeholder: 'Type the post text here',
+  lable: true,
+  :as => :text,
+  :input_html => { 'rows' => 4, 'cols' => 10 } %>
+  <%= f.submit %>
+
+<% end %>
