@@ -1,7 +1,16 @@
 <div class="container">
-<h1>All posts:</h1>
-<% @posts.each do |post| %>
-  <%= link_to post.title, post_path(post) %>
-<% end %>
-<%= link_to 'New Post', new_post_path %>
+  <!-- <h1>All posts:</h1> -->
+  <% @posts.each do |post| %>
+    <tr>
+      <td>
+        <div class="post">
+          <%= post.date.strftime("%d %b %Y") %>
+          <%= link_to post.title, post_path(post) %>
+        </div>
+      </td>
+    </tr>
+  <% end %>
+  <div class="back-link">
+    <%= link_to 'New Post', new_post_path %>
+  </div>
 </div>

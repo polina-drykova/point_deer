@@ -33,8 +33,9 @@ a {
   color: #414042;
   border-bottom: 1px solid #414042;
   &:hover {
-    text-decoration: none;
+    text-decoration: transparent;
     border-bottom: none;
     color: #414042;
   }
 }
+
