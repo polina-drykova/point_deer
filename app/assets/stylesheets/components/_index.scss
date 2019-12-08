@@ -2,3 +2,17 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+
+.container {
+  width: 90%;
+  margin-top: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 700px) {
+  .container {
+    width: 50%;
+    margin-top: 5%;
+  }
+}
