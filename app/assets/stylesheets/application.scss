@@ -12,6 +12,7 @@
 @import "components/index";
 @import "pages/index";
 @import "components/show";
+@import "components/form";
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
 
 $main_font: 'Nanum Gothic', 'sans-serif';
@@ -35,7 +36,7 @@ a {
   border-bottom: 1px solid #414042;
   &:hover {
     text-decoration: transparent;
-    border-bottom: none;
+    border-bottom: 1px solid white;
     color: #414042;
   }
 }
