@@ -11,3 +11,30 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap');
+
+$main_font: 'Nanum Gothic', 'sans-serif';
+
+body, html {
+  background-color: #ffffff;
+}
+
+body {
+  font-family: $main_font;
+  color: #414042;
+  height: 100vh;
+}
+
+h1 {
+  font-family: $main_font;
+}
+
+a {
+  color: #414042;
+  border-bottom: 1px solid #414042;
+  &:hover {
+    text-decoration: none;
+    border-bottom: none;
+    color: #414042;
+  }
+}
