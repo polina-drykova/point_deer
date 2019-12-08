@@ -12,7 +12,7 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
       send :"#{method}_without_cloudinary" if self.file.is_a? CarrierWave::SanitizedFile
       {}
     end
-    alias_method_chain method, :cloudinary
+    alias_method method, :cloudinary
   end
 
   version :thumb do
