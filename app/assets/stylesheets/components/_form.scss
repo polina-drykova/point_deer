@@ -1,0 +1,46 @@
+.form-container {
+  width: 90%;
+  margin: 20% auto auto auto;
+}
+
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.date-wrap, .button-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+input[type="submit"] {
+  background: transparent;
+  border: none;
+  color: #414042;
+  border-bottom: 1px solid #414042;
+  &:hover {
+    text-decoration: transparent;
+    border-bottom: 1px solid white;
+    color: #414042;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .form-container {
+    width: 80%;
+    margin-top: 14%;
+  }
+  .form-wrap {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-container {
+    width: 50%;
+    margin-top: 5%;
+  }
+}

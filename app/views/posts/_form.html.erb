@@ -1,13 +1,18 @@
 <%= form_for (@post) do |f| %>
-  <%= render 'shared/error_messages' %>
+  <div class="form-wrap">
+    <%= render 'shared/error_messages' %>
 
-  <%= f.text_field :title,
-  placeholder: 'Type the post title here',
-  lable: true %>
-  <%= f.date_select :date %>
-  <%= f.cktext_area :content,
-  class: 'ckeditor'
-  %>
-  <%= f.submit %>
+    <%= f.text_field :title,
+    placeholder: 'Type the post title here',
+    lable: true %>
+  </div>
+  <div class="date-wrap">
+    <%= f.date_select :date %>
+  </div>
+  <%= f.cktext_area :content, class: 'ckeditor' %>
+  <div class="button-wrap">
+    <%= f.submit %>
+  </div>
 <% end %>
+
 <%= javascript_include_tag Ckeditor.cdn_url %>
