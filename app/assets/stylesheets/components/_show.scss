@@ -1,0 +1,46 @@
+@import "alert";
+@import "avatar";
+@import "navbar";
+
+.container-show {
+  width: 90%;
+  margin: 20% auto auto auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.back-link {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.links {
+  margin: 5% auto auto auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+  .container {
+    width: 60%;
+    margin-top: 14%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 50%;
+    margin-top: 6%;
+  }
+  .back-link {
+    margin-top: 1%;
+  }
+  .links {
+    width: 20%;
+  }
+}
