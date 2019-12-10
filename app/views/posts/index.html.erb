@@ -11,6 +11,8 @@
     </tr>
   <% end %>
   <div class="back-link">
-    <%= link_to 'New Post', new_post_path %>
+    <% if session[:admin] then %>
+      <%= link_to 'New Post', new_post_path %>
+    <% end %>
   </div>
 </div>
