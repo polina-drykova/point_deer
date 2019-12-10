@@ -1,8 +1,8 @@
 class PhotoUploader < CarrierWave::Uploader::Base
+  include Cloudinary::CarrierWave
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-    include Cloudinary::CarrierWave
 
 
   # Choose what kind of storage to use for this uploader:
@@ -22,10 +22,10 @@ class PhotoUploader < CarrierWave::Uploader::Base
     resize_to_fit 256, 256
   end
 
-  version :bright_face do
-    cloudinary_transformation effect: "brightness:30", radius: 20,
-      width: 150, height: 150, crop: :thumb, gravity: :face
-  end
+  # version :bright_face do
+  #   cloudinary_transformation effect: "brightness:30", radius: 20,
+  #     width: 150, height: 150, crop: :thumb, gravity: :face
+  # end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -57,4 +57,8 @@ class PhotoUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  def public_id
+    name = Digest::SHA1.hexdigest([Time.now, rand].join)
+    return name+"_"+Rails.env
+  end
 end
