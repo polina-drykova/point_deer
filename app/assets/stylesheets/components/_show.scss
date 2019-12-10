@@ -4,7 +4,8 @@
 
 .container-show {
   width: 90%;
-  margin: 20% auto auto auto;
+  margin: 10% auto 20% auto;
+  -webkit-margin-after: 20%;
 }
 
 h1 {
@@ -19,7 +20,7 @@ h1 {
 }
 
 .links {
-  margin: 5% auto auto auto;
+  margin: 10% auto 30% auto;
   width: 50%;
   display: flex;
   justify-content: space-around;
@@ -35,7 +36,10 @@ h1 {
 @media (min-width: 1024px) {
   .container {
     width: 50%;
-    margin-top: 6%;
+    margin-top: 5%;
+    margin-bottom: 0;
+  -webkit-margin-after: 20%;
+
   }
   .back-link {
     margin-top: 1%;
