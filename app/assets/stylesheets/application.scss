@@ -19,12 +19,12 @@ $main_font: 'Nanum Gothic', 'sans-serif';
 
 body, html {
   background-color: #ffffff;
+  height: 100vh;
 }
 
 body {
   font-family: $main_font;
   color: #414042;
-  height: 100vh;
 }
 
 h1 {
