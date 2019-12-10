@@ -46,7 +46,9 @@ protected
   # for admin access:
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      username == 'test' && password == 'test'
+      admin_username = ENV["ADMIN_USERNAME"]
+      admin_password = ENV["ADMIN_PASSWORD"]
+      username == admin_username && password == admin_password
     end
   end
 
