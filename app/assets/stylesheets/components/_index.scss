@@ -17,11 +17,30 @@
   justify-content: space-between;
   padding-top: 5px;
   padding-bottom: 5px;
+    a {
+      color: #414042;
+      border-bottom: 1px solid #414042;
+      &:hover {
+        text-decoration: transparent;
+        border-bottom: 1px solid white;
+        color: #414042;
+    }
+      }
 }
+
 .back-link {
   margin-top: 10%;
   display: flex;
   justify-content: center;
+    a {
+      color: #414042;
+      border-bottom: 1px solid #414042;
+      &:hover {
+        text-decoration: transparent;
+        border-bottom: 1px solid white;
+        color: #414042;
+  }
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
