@@ -17,6 +17,15 @@ h1 {
   margin-top: 5%;
   display: flex;
   justify-content: center;
+    a {
+      color: #414042;
+      border-bottom: 1px solid #414042;
+      &:hover {
+        text-decoration: transparent;
+        border-bottom: 1px solid white;
+        color: #414042;
+  }
+    }
 }
 
 .links {
@@ -24,6 +33,15 @@ h1 {
   width: 50%;
   display: flex;
   justify-content: space-around;
+    a {
+      color: #414042;
+      border-bottom: 1px solid #414042;
+      &:hover {
+        text-decoration: transparent;
+        border-bottom: 1px solid white;
+        color: #414042;
+  }
+    }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {

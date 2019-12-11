@@ -1,11 +1,9 @@
-class PagesController < ApplicationController
-  def home
+class ContactsController < ApplicationController
+  def new
+    @contact = Contact.new
   end
 
-  def about
-  end
-
-  def contact
+  def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
@@ -13,6 +11,8 @@ class PagesController < ApplicationController
       redirect_to contact_path, notice: 'Your message has been sent'
     else
       flash.now[:error] = 'Cannot send message'
+      render :new
     end
   end
+
 end

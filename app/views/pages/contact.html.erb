@@ -1,6 +1,34 @@
-<div class="container">
+<div class="contact-container">
   <h1>Contact page</h1>
-  <div class="links">
-    <%= link_to 'Back', :back %>
+  <div class="form-wrap">
+    <%= form_for @contact do |f| %>
+      <div class='notice'>
+          <% if flash[:notice].present? %>
+            <%= cl_image_tag ("https://image.flaticon.com/icons/svg/443/443138.svg") %>
+            <%= flash[:notice] %>
+          <% end %>
+      </div>
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true, class: 'input' %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email, required: true, class: 'input' %>
+
+      <%= f.label :message %>
+      <%= f.text_area :message, required: true, as: :text, class: 'input' %>
+
+      <%= f.label :nickname, class: 'hidden' %>
+      <%= f.text_field :nickname, hint: 'leave this field blank', class: 'hidden' %>
+
+      <div class="contact-links">
+        <%= f.submit 'Send message' %>
+        <%#= link_to ' Back ', :back %>
+      </div>
+      <div class="contact-links">
+        <%= link_to 'https://twitter.com/PorterhouseMD', target: '_blank' do %>
+          <i class="fab fa-twitter"></i>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
