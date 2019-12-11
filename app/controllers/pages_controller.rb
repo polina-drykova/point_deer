@@ -13,7 +13,6 @@ class PagesController < ApplicationController
       redirect_to contact_path, notice: 'Your message has been sent'
     else
       flash.now[:error] = 'Cannot send message'
-      render :new
     end
   end
 end

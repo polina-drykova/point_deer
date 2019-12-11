@@ -1,9 +1,12 @@
 <div class="container">
   <h1>Contact page</h1>
   <%= form_for @contact do |f| %>
-    <% if flash[:error].present? %>
-      <p>flash[:error]</p>
-    <% end %>
+    <div class='notice'>
+        <% if flash[:notice].present? %>
+          <%= cl_image_tag ("https://image.flaticon.com/icons/svg/443/443138.svg") %>
+          <%= flash[:notice] %>
+        <% end %>
+    </div>
     <%= f.label :name %>
     <%= f.text_field :name, required: true %>
 
@@ -11,14 +14,19 @@
     <%= f.text_field :email, required: true %>
 
     <%= f.label :message %>
-    <%= f.text_field :message, required: true %>
+    <%= f.text_area :message, required: true, as: :text %>
 
     <%= f.label :nickname %>
     <%= f.text_field :nickname, hint: 'leave this field blank', class: 'hidden' %>
 
-    <%= f.submit 'Send' %>
+    <div class="links">
+      <%= f.submit 'Send' %>
+      <%= link_to 'Back', :back %>
+    </div>
+    <div class="links">
+      <%= link_to 'https://github.com/polina-drykova', target: '_blank' do %>
+        <i class="fab fa-twitter"></i>
+      <% end %>
+    </div>
   <% end %>
-  <div class="links">
-    <%= link_to 'Back', :back %>
-  </div>
 </div>
