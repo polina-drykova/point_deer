@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to post_path(@post),
+      redirect_to post_path(@post)
       # notice: "The post was created!"
     else
       render :new
@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-      redirect_to post_path(@post),
+      redirect_to post_path(@post)
       # notice: "Updated"
     else
       render :edit
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path,
+    redirect_to posts_path
     # notice: "Post destroyed"
   end
 
