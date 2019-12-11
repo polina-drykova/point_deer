@@ -1,5 +1,23 @@
 <div class="container">
   <h1>Contact page</h1>
+  <%= form_for @contact do |f| %>
+    <% if flash[:error].present? %>
+      <p>flash[:error]</p>
+    <% end %>
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true %>
+
+    <%= f.label :email %>
+    <%= f.text_field :email, required: true %>
+
+    <%= f.label :message %>
+    <%= f.text_field :message, required: true %>
+
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname, hint: 'leave this field blank', class: 'hidden' %>
+
+    <%= f.submit 'Send' %>
+  <% end %>
   <div class="links">
     <%= link_to 'Back', :back %>
   </div>
