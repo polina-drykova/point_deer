@@ -5,7 +5,9 @@
       <td>
         <div class="post">
           <%= link_to post.title, post_path(post) %>
-          <%= post.date.strftime("%d %b %Y") %>
+          <div class="date">
+            <%= post.date.strftime("%d %b %Y") %>
+          </div>
         </div>
       </td>
     </tr>

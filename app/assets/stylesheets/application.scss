@@ -40,11 +40,11 @@ h1 {
 
 .link {
   color: #414042;
-  border-bottom: 1px solid #414042;
+  text-decoration: transparent;
   &:hover {
-    text-decoration: transparent;
-    border-bottom: 1px solid white;
     color: #414042;
+    text-decoration: underline;
+    -webkit-text-decoration: underline;
   }
 }
 
