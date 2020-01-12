@@ -4,7 +4,7 @@
 @import "footer";
 
 .container {
-  width: 90%;
+  width: 95%;
   margin: 13% auto 15% auto;
   text-align: center;
 }
@@ -23,8 +23,12 @@
         color: #414042;
         text-decoration: underline;
         -webkit-text-decoration: underline;
-    }
       }
+    }
+}
+
+.post-title {
+  text-align: left;
 }
 
 .back-link {
@@ -38,12 +42,13 @@
         color: #414042;
         text-decoration: underline;
         -webkit-text-decoration: underline;
-    }
       }
+    }
 }
 
 .date {
   font-size: 85%;
+  text-align: right;
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
