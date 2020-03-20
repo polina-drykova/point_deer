@@ -3,7 +3,7 @@
 @import "footer";
 
 .container-show {
-  width: 95%;
+  width: 90%;
   margin: 10% auto 20% auto;
 }
 
@@ -48,16 +48,9 @@ p {
     }
 }
 
-@media (min-width: 700px) and (max-width: 1000px) {
-  .container {
-    width: 60%;
-    margin-top: 14%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    width: 50%;
+@media (min-width: 700px) {
+  .container-show {
+    width: 600px !important;
     margin-top: 5%;
     margin-bottom: 0;
   }
